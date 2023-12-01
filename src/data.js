@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/react";
 
 // Navbar Logo image (uncomment below and import your image)
-// import newLogo from "./images/yourFileName"
+import newLogo from "./images/morty.jpg"
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/ship.bmp";
@@ -22,11 +22,10 @@ export { HeroDark as Dark };
 */
 export const githubUsername = "maudiaz221";
 
-// Navbar Logo image
-export const navLogo = undefined;
+export const navLogo = newLogo;
 
 // Blog link icon - https://icon-sets.iconify.design/
-export const Blog = <Icon icon="mdi:instagram" />;
+export const Blog = <Icon icon="mdi:linkedin" />;
 
 
 
@@ -119,3 +118,4 @@ export const projectCardImages = [
   https://formspree.io/
 */
 export const formspreeUrl = "https://formspree.io/f/xeqbvqjl";
+                     

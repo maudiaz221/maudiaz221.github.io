@@ -88,8 +88,12 @@ export default function NavBar({ Logo }) {
       { id: "1T", name: "Home", to: "Home" },
       { id: "2T", name: "About Me", to: "About" },
       { id: "3T", name: "Skills", to: "Skills" },
+      { id: "7T", name: "Interests", to: "Interests" },
       { id: "4T", name: "Projects", to: "Projects" },
-      { id: "5T", name: "Contact", to: "Contact" },
+      { id: "6T", name: "Blog", to: "Article" },
+      { id: "5T", name: "Contact", to: "Contact" }
+      
+      
     ],
   };
 
