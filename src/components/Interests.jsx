@@ -76,7 +76,7 @@ const Interests = () => {
                 />
                 <h6 className="title">Basketball</h6>
                 <p className="hidden-text">
-                  Me encanta jugar basketball, es una actividad esencial en mi dia a dia.
+                  Me encanta jugar basketball, soy penesoso.
                 </p>
               </div>
             </div>
