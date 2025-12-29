@@ -1,128 +1,80 @@
-# A React Portfolio Template for GitHub
+# Cyberpunk Neon Portfolio
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
+A modern, cyberpunk-themed portfolio built with Next.js 14, TypeScript, and Tailwind CSS featuring hot pink and electric cyan neon aesthetics.
 
-A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
+## Features
 
-Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
+- **Cyberpunk Neon Design**: Hot pink and cyan neon glow effects on dark backgrounds
+- **6 Portfolio Sections**: Hero, About, Experience, Projects, Skills, Contact
+- **GitHub API Integration**: Automatically fetches your latest repositories and profile data
+- **Smooth Scroll Navigation**: Single-page application with smooth scrolling between sections
+- **Responsive Design**: Fully responsive across all devices
+- **Contact Form**: Integrated with Formspree for easy contact submissions
+- **Static Export**: Optimized for GitHub Pages deployment
 
-## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
+## Quick Start
 
-[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+```bash
+# Install dependencies
+npm install
 
-![Page Speed](/README_images/speed.png)
+# Run development server
+npm run dev
 
-## Light And Dark Themes
+# Build for production
+npm run build
+```
 
-![Hero Light](/README_images/hero.png)
+## Customization Guide
 
-![Hero Dark](/README_images/heroDark.png)
+### 1. Personal Information ([data/config.ts](data/config.ts))
 
-### Getting Started
+Update your GitHub username, social links, and contact information:
 
-1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-2. [Clone your repository](https://developers.google.com/speed/pagespeed/insights/)
-3. Make sure [Node](https://nodejs.org/en/) is installed
-4. Open your project and install the dependencies
+```typescript
+social: {
+  github: 'https://github.com/maudiaz221',
+  linkedin: 'https://linkedin.com/in/YOUR_PROFILE', // TODO: Update
+  email: 'your.email@example.com', // TODO: Update
+},
+```
 
-   ```bash
-   npm install
-   ```
+### 2. About Me ([data/personal.ts](data/personal.ts))
 
-5. Navigate to the src directory and open data.js
-6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L17) lines 17-21)
+Replace placeholder bio, interests, and education.
 
-   ```javascript
-   /* START HERE
-   ************************************************************** 
-     Add your GitHub username (string - "YourUsername") below.
-   */
-   export const githubUsername = "Your GitHub username here";
-   ```
+### 3. Experience ([data/experience.ts](data/experience.ts))
 
-7. Start the development server to view the results
+Add your work experience from your CV.
 
-   ```bash
-   npm start
-   ```
+### 4. Skills ([data/skills.ts](data/skills.ts))
 
-### Updating the Projects section
+Modify skills list with your technologies.
 
-![Projects](/README_images/projects.png)
+### 5. Projects ([data/projects.ts](data/projects.ts))
 
-1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-95)
+Update project metadata and add images to `/public/images/projects/`.
 
-   ```javascript
-   /* Projects
-   ************************************************************** 
-     List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
-   */
-   export const filteredProjects = ["example-1", "example-2", "example-3"];
-   ```
+### 6. Profile Picture
 
-2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L7) lines 7-8) or the default image will be applied
+Replace `/public/images/profile/morty.jpg` with your photo.
 
-   ```javascript
-   // Projects Images (add your images to the images directory and import below)
-   import Logo from "./images/logo.svg";
-   ```
+## Deployment
 
-3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L97) lines 97-103)
+The build creates static files in `/out` directory ready for GitHub Pages:
 
-   ```javascript
-   // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
-   export const projectCardImages = [
-     {
-       name: "example-1",
-       image: Logo,
-     },
-   ];
-   ```
+```bash
+npm run build
+```
 
-### Updating the Contact section
+Then deploy the `/out` folder using your existing GitHub Pages workflow.
 
-![Projects](/README_images/contact.png)
+## Tech Stack
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L105) lines 105-110)
+- Next.js 14+ (App Router), TypeScript
+- Tailwind CSS, Framer Motion
+- Iconify React, Octokit (GitHub API)
 
-   ```javascript
-   /* Contact Info
-   ************************************************************** 
-     Add your formspree endpoint below.
-     https://formspree.io/
-   */
-   export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
-   ```
+## License
 
-### Deploy
-
-A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
-
-1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
-
-   ```json
-   "homepage": "https://YourUsername.github.io/your-app/",
-   ```
-
-2. Run the deploy command
-
-   ```bash
-   npm run deploy
-   ```
-
-### Customization Options
-
-Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
-
-- [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images)
-- [Add a custom Blog icon](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images#add-a-custom-blog-icon)
-- [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
-- [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
-- [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
-- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
-
-[Back to top :top:](#a-react-portfolio-template-for-github)
-
-### License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT - Free to use for your portfolio!

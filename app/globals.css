@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --nav-height: 80px;
+}
+
+@theme inline {
+  /* Cyberpunk Neon Colors */
+  --color-neon-pink: #FF006E;
+  --color-neon-cyan: #00F5FF;
+  --color-neon-purple: #B900FF;
+  --color-cyber-dark: #0A0E27;
+  --color-cyber-darker: #050814;
+  --color-cyber-gray: #1A1F3A;
+
+  /* Fonts */
+  --font-cyber: 'Orbitron', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Shadows */
+  --shadow-neon-pink: 0 0 10px #FF006E, 0 0 20px #FF006E, 0 0 30px #FF006E;
+  --shadow-neon-cyan: 0 0 10px #00F5FF, 0 0 20px #00F5FF, 0 0 30px #00F5FF;
+  --shadow-neon-glow: 0 0 5px currentColor, 0 0 10px currentColor;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cyber-darker);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  antialiased: true;
+}
+
+::selection {
+  background: var(--color-neon-pink);
+  color: var(--color-cyber-darker);
+}
+
+/* Neon text styles */
+.neon-text {
+  color: var(--color-neon-pink);
+  text-shadow: 0 0 10px var(--color-neon-pink), 0 0 20px var(--color-neon-pink);
+}
+
+.neon-text-cyan {
+  color: var(--color-neon-cyan);
+  text-shadow: 0 0 10px var(--color-neon-cyan), 0 0 20px var(--color-neon-cyan);
+}
+
+/* Neon border effects */
+.neon-border {
+  border: 2px solid var(--color-neon-pink);
+  box-shadow: 0 0 10px var(--color-neon-pink), inset 0 0 10px var(--color-neon-pink);
+}
+
+.neon-border-cyan {
+  border: 2px solid var(--color-neon-cyan);
+  box-shadow: 0 0 10px var(--color-neon-cyan), inset 0 0 10px var(--color-neon-cyan);
+}
+
+/* Section container */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Animations */
+@keyframes pulse-neon {
+  0%, 100% {
+    text-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 8px currentColor, 0 0 16px currentColor, 0 0 24px currentColor;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  to {
+    box-shadow: 0 0 15px currentColor, 0 0 30px currentColor, 0 0 45px currentColor;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.animate-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+/* Accessibility - respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
