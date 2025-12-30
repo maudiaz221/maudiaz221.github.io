@@ -11,8 +11,7 @@ export default function Skills() {
   const categories = {
     language: skills.filter((s) => s.category === 'language'),
     framework: skills.filter((s) => s.category === 'framework'),
-    tool: skills.filter((s) => s.category === 'tool'),
-    database: skills.filter((s) => s.category === 'database'),
+    aws: skills.filter((s) => s.category === 'aws'),
   };
 
   return (
@@ -71,54 +70,30 @@ export default function Skills() {
             </div>
           )}
 
-          {/* Tools & Databases */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {categories.tool.length > 0 && (
-              <div>
-                <h3 className="text-2xl font-[family-name:var(--font-cyber)] font-bold text-[var(--color-neon-pink)] mb-6 text-center">
-                  Tools
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {categories.tool.map((skill, index) => (
-                    <motion.div
-                      key={skill.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex items-center gap-3 p-3 bg-[var(--color-cyber-gray)] rounded-lg"
-                    >
-                      <Icon icon={skill.icon} className="text-3xl text-[var(--color-neon-pink)]" />
-                      <span className="text-sm font-mono text-gray-300">{skill.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
+          {/* AWS Services */}
+          {categories.aws.length > 0 && (
+            <div>
+              <h3 className="text-2xl font-[family-name:var(--font-cyber)] font-bold text-[var(--color-neon-pink)] mb-6 text-center">
+                AWS Services
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {categories.aws.map((skill, index) => (
+                  <motion.div
+                    key={skill.id}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ scale: 1.1 }}
+                    className="flex flex-col items-center gap-2 p-4 bg-[var(--color-cyber-gray)] rounded-lg border-2 border-[var(--color-neon-pink)]/30 hover:border-[var(--color-neon-pink)] transition-all"
+                  >
+                    <Icon icon={skill.icon} className="text-5xl text-[var(--color-neon-pink)]" />
+                    <span className="text-sm font-mono text-gray-300 text-center">{skill.name}</span>
+                  </motion.div>
+                ))}
               </div>
-            )}
-
-            {categories.database.length > 0 && (
-              <div>
-                <h3 className="text-2xl font-[family-name:var(--font-cyber)] font-bold text-[var(--color-neon-purple)] mb-6 text-center">
-                  Databases
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {categories.database.map((skill, index) => (
-                    <motion.div
-                      key={skill.id}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex items-center gap-3 p-3 bg-[var(--color-cyber-gray)] rounded-lg"
-                    >
-                      <Icon icon={skill.icon} className="text-3xl text-[var(--color-neon-purple)]" />
-                      <span className="text-sm font-mono text-gray-300">{skill.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Resume Button */}

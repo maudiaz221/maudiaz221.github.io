@@ -21,6 +21,7 @@ export const siteConfig = {
   featuredRepos: [
     'encore_prisma_db',
     'tarea2MGE',
+    'streaming-RL-bot-finance',
     'DayTradingBot',
     'arbitrageBot',
   ] as string[],
