@@ -1,26 +1,23 @@
 export const aboutMe = {
-  bio: `I am a passionate developer with expertise in full-stack development and machine learning.
-  I love building innovative solutions that combine cutting-edge technology with practical applications.
+  bio: `Data scientist and developer by day, roblox Connoisseur by day as well. ITAM graduate with a consistent track record: my code never works on the first try 🥀 but occasionally works on the second.
 
-  My interests span from financial technology and algorithmic trading to deep learning and web development.
-  I'm constantly learning and pushing myself to tackle new challenges.`,
+I deploy Lambdas and containers in ECS straight to prod without testing because I like to live. They work. Sometimes. Usually not on the first try. 🥀`,
 
   // TODO: Update with your actual interests
   interests: [
     'Machine Learning & AI',
-    'Financial Technology',
+    'Data Science',
     'Full-Stack Development',
-    'Algorithmic Trading',
-    'Database Architecture',
-    'Deep Reinforcement Learning',
+    'Cloud Architecture',
+    'Video Games',
+    'Drumming',
   ],
 
   // TODO: Update with your actual education
   education: [
     {
-      degree: 'Bachelor of Science in Computer Science', // Update this
-      institution: 'Your University', // Update this
-      year: '2020-2024', // Update this
+      degree: 'Bachelor in Data Science', // Update this
+      institution: 'Instituto Tecnologico Autonomo de Mexico', // Update this
     },
   ],
 };

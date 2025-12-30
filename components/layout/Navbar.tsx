@@ -3,19 +3,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { scrollToElement } from '@/lib/utils';
-import { useLanguage } from '@/lib/LanguageContext';
-
 const navItems = [
-  { name: 'Home', href: '#hero', key: 'nav.home' },
-  { name: 'About', href: '#about', key: 'nav.about' },
-  { name: 'Experience', href: '#experience', key: 'nav.experience' },
-  { name: 'Projects', href: '#projects', key: 'nav.projects' },
-  { name: 'Skills', href: '#skills', key: 'nav.skills' },
-  { name: 'Contact', href: '#contact', key: 'nav.contact' },
+  { name: 'Home', href: '#hero' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
-  const { language, setLanguage, t } = useLanguage();
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -84,7 +81,7 @@ export default function Navbar() {
                     : 'text-gray-300 hover:text-[var(--color-neon-cyan)]'
                 }`}
               >
-                {t(item.key)}
+                {item.name}
                 {activeSection === item.href.slice(1) && (
                   <motion.div
                     layoutId="activeSection"
@@ -95,58 +92,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Language Toggle - Far Right */}
-          <div className="hidden md:flex items-center flex-shrink-0 gap-2">
-            <button
-              onClick={() => setLanguage('en')}
-              className={`font-mono text-base transition-colors ${
-                language === 'en'
-                  ? 'text-[var(--color-neon-pink)] font-bold'
-                  : 'text-gray-400 hover:text-[var(--color-neon-cyan)]'
-              }`}
-            >
-              EN
-            </button>
-            <span className="text-gray-600">|</span>
-            <button
-              onClick={() => setLanguage('es')}
-              className={`font-mono text-base transition-colors ${
-                language === 'es'
-                  ? 'text-[var(--color-neon-pink)] font-bold'
-                  : 'text-gray-400 hover:text-[var(--color-neon-cyan)]'
-              }`}
-            >
-              ES
-            </button>
-          </div>
-
-          {/* Mobile Menu Button & Language Toggle */}
-          <div className="md:hidden flex items-center justify-self-end gap-4">
-            {/* Language Toggle Mobile */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setLanguage('en')}
-                className={`font-mono text-xs transition-colors ${
-                  language === 'en'
-                    ? 'text-[var(--color-neon-pink)] font-bold'
-                    : 'text-gray-400'
-                }`}
-              >
-                EN
-              </button>
-              <span className="text-gray-600">|</span>
-              <button
-                onClick={() => setLanguage('es')}
-                className={`font-mono text-xs transition-colors ${
-                  language === 'es'
-                    ? 'text-[var(--color-neon-pink)] font-bold'
-                    : 'text-gray-400'
-                }`}
-              >
-                ES
-              </button>
-            </div>
-
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center justify-self-end">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-[var(--color-neon-cyan)] text-2xl"
@@ -174,7 +121,7 @@ export default function Navbar() {
                     : 'text-gray-300'
                 }`}
               >
-                {t(item.key)}
+                {item.name}
               </a>
             ))}
           </motion.div>

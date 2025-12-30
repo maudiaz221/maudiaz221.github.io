@@ -8,13 +8,13 @@ export const siteConfig = {
 
   // Personal Info
   name: 'Mauricio Diaz',
-  tagline: 'Full-Stack Developer | ML Engineer',
+  tagline: 'Data Scientist',
 
   // Social Links
   social: {
     github: 'https://github.com/maudiaz221',
-    linkedin: 'https://linkedin.com/in/your-profile', // TODO: Update with your LinkedIn
-    email: 'your.email@example.com', // TODO: Update with your email
+    linkedin: 'https://www.linkedin.com/in/mauricio-diaz-433699263/', // TODO: Update with your LinkedIn
+    email: 'diazmau221@gmail.com', // TODO: Update with your email
   },
 
   // Featured Project Repos
