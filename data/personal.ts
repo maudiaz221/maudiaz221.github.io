@@ -18,6 +18,7 @@ I deploy Lambdas and containers in ECS straight to prod without testing because 
     {
       degree: 'Bachelor in Data Science', // Update this
       institution: 'Instituto Tecnologico Autonomo de Mexico', // Update this
+      year: '2021 - 2025', // Update this
     },
   ],
 };

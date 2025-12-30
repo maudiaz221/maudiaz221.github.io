@@ -4,7 +4,7 @@ export const siteConfig = {
 
   // Contact Integration
   formspreeUrl: 'https://formspree.io/f/xeqbvqjl',
-  resumeUrl: 'https://beige-bette-86.tiiny.site',
+  resumeUrl: '/resume.pdf',
 
   // Personal Info
   name: 'Mauricio Diaz',
