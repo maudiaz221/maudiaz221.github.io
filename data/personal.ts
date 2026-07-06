@@ -1,7 +1,5 @@
 export const aboutMe = {
-  bio: `Data scientist and developer by day, roblox Connoisseur by day as well. ITAM graduate with a consistent track record: my code never works on the first try 🥀 but occasionally works on the second.
-
-I deploy Lambdas and containers in ECS straight to prod without testing because I like to live. They work. Sometimes. Usually not on the first try. 🥀`,
+  bio: `I'm a Data Scientist at Deep Dive AI, where I lead cross-functional teams delivering AI and machine learning solutions for insurance, fintech, and consumer clients across Mexico. My work spans designing production architectures for agentic AI systems, building challenger risk models, and deploying end-to-end ML pipelines on AWS.`,
 
   // TODO: Update with your actual interests
   interests: [

@@ -12,16 +12,19 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Software Engineer', // Update this
-    company: 'Deep Dive AI', // Update this
-    location: 'Mexico City, Mexico', // Update this
-    period: 'June 2025 - Present', // Update this
+    title: 'Data Scientist',
+    company: 'Deep Dive AI',
+    location: 'Mexico City, Mexico',
+    period: 'June 2025 - Present',
     description: [
-      'Designed ML pipeline on AWS (Lambda, Glue, Step Functions) to forecast weekly bottle consumption in restaurants, improving inventory accuracy and cutting costs.',
-      'Implemented finite state machine in whatsapp for generating automatized quotes for insurance broker clients.',
-      'Re-architected code infrastructure of fintech project using proper design patters and designed and deployed production architecture for fintech project.',
+      'Lead a cross-functional team of 4 developers and a project manager for an insurance brokerage client, owning the architecture of a WhatsApp agent that automates insurance quote generation and policy emission.',
+      'Led the implementation of a CRM centralizing client and broker documentation and communication, including automated OCR for policy data entry into the database.',
+      'Designed the architecture for an agent that researches payment-default risk signals and maps them to a Databricks Unity Catalog metadata dictionary to automate variable generation for a fintech client.',
+      'Built and delivered a challenger risk model on this architecture, reducing delinquent balance by 30%.',
+      'Led development of a WhatsApp agent that automated client onboarding, order creation, and status tracking for a coffee company, replacing a manual process for 100+ clients.',
+      'Designed an ML pipeline on AWS (Lambda, Glue, Step Functions) to forecast weekly bottle consumption in restaurants, improving inventory accuracy and reducing costs.',
     ],
-    tech: ['Lambda', 'Glue', 'Nixtla', 'Step Functions','ECS','Actions','FastAPI','Docker'],
+    tech: ['AWS', 'Lambda', 'Step Functions', 'Glue', 'ECS', 'Databricks', 'Strands', 'Bedrock', 'FastAPI', 'Docker'],
   },
   {
     id: 2,

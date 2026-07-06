@@ -10,20 +10,13 @@ export interface ProjectMetadata {
 
 export const projectsMetadata: ProjectMetadata[] = [
   {
-    repoName: 'encore_prisma_db',
-    title: 'Encore Prisma Database',
-    description: 'Backend service built with Encore framework and Prisma ORM for scalable database management on EC2',
-    thumbnail: '/images/projects/encore.png',
-    tech: ['TypeScript', 'Prisma', 'PostgreSQL', 'Encore', 'AWS EC2'],
+    repoName: 'MCPX',
+    title: 'MCPX',
+    description: 'Adaptive MCP optimization proxy that sits between any MCP client and server. Three composable layers cut token usage by up to 98% without changing your tools.',
+    thumbnail: '/image.png',
+    tech: ['Python', 'MCP', 'AI Agents', 'LLMs', 'Open Source'],
     featured: true,
-  },
-  {
-    repoName: 'tarea2MGE',
-    title: 'Full-Stack ML Application',
-    description: 'End-to-end machine learning application with deployment pipeline and model serving',
-    thumbnail: '/images/projects/ml-app.png',
-    tech: ['Python', 'Machine Learning', 'React', 'FastAPI', 'Docker'],
-    featured: true,
+    demoUrl: 'https://mcpx.click/',
   },
   {
     repoName: 'streaming-RL-bot-finance',
